@@ -24,6 +24,13 @@ const zeta = [...Array(26)].map((a,c) => String.fromCharCode(c+65));
 const eta = Array.from(Array(26).keys(), (a,c) => String.fromCharCode(c+65));
 //array of letters from A-Z
 
+function countUnique(ar){
+    let arr;
+    let unique = new Set([...ar]);
+    arr = Array.from(unique);
+    return arr.length;
+}
+
 const chunk = (arr, size) => Array.from({
     length: Math.ceil(arr.length/size)
 }, (a,c) => arr.slice(c*size, c * size + size));
